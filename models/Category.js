@@ -9,7 +9,8 @@ Category.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      allowNull: false
   },
   category_name: {
     type: DataTypes.STRING,
@@ -17,14 +18,14 @@ Category.init(
       validate: {
         len: [1]
       }
-    }
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'category'
   }
 );
 
